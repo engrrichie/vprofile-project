@@ -3,7 +3,7 @@ services:
   vprodb:
     build: 
        context: ./Docker-files/db
-    image: Yemiawsguru/vprofiledb
+    image: yemicloudguru/vprofiledb
     container_name: vprodb
     ports:
       - "3306:3306"
@@ -17,7 +17,7 @@ services:
     ports:
       - "11211:11211"
 
-  vpromqear1:
+  vpromq01:
      image: rabbitmq
      ports:
        - "15672:15672"
@@ -28,7 +28,7 @@ services:
   vproapp:
     build: 
        context: ./Docker-files/app
-    image: Yemiawsguru/vprofileapp
+    image: yemicloudguru/vprofileapp
     container_name: vproapp
     ports:
       - "8080:8080"
@@ -38,7 +38,7 @@ services:
   vproweb:
     build: 
        context: ./Docker-files/web
-    image: Yemiawsguru/vprofileweb
+    image: yemicloudguru/vprofileweb
     container_name: vproweb
     ports:
       - "80:80"
